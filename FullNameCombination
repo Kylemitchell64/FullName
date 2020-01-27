@@ -1,0 +1,30 @@
+namespace Rextester
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            //string FullName = "Kyle Mitchell";
+            string FullName = "Mitchell, Kyle";
+            string FirstName;
+            string LastName;
+            
+            if (FullName.Contains(','))
+            {
+                string[] words = FullName.Split(',');
+                FirstName = words[1];
+                LastName = words[0];
+            
+            }
+            else
+            {
+                string[] words = FullName.Split(' ');
+                FirstName = words[0];
+                LastName = words[1];
+            }
+            
+            System.Console.WriteLine("Hello, " + FirstName + " " + LastName + ".");
+            
+        }
+    }
+}
